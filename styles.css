@@ -40,12 +40,17 @@ body {
     margin-top: 0.1rem;
 }
 
+input:focus {
+    outline-color: hsl(259, 100%, 65%);
+}
+
+
 .year_input {
     margin-right: 10rem;
 }
 
 .button {
-    background-color: hsl(0, 0%, 8%);
+    background-color: hsl(259, 100%, 65%);
     border-radius: 50%;
     padding: 1rem;
     position: absolute;
