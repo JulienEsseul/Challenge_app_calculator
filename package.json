@@ -6,9 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Julien Esseul",
   "license": "ISC",
   "dependencies": {
     "moment": "^2.29.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulienEsseul/Challenge_app_calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JulienEsseul/Challenge_app_calculator/issues"
+  },
+  "homepage": "https://github.com/JulienEsseul/Challenge_app_calculator#readme"
 }

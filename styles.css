@@ -18,7 +18,7 @@ body {
 .user_input {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 2vw;
     padding-bottom: 2rem;
     border-bottom: solid 1px hsl(0, 0%, 94%);
     color: hsl(0, 1%, 44%);
@@ -46,7 +46,7 @@ input:focus {
 
 
 .year_input {
-    margin-right: 10rem;
+    margin-right: 9rem;
 }
 
 .button {
@@ -55,7 +55,7 @@ input:focus {
     padding: 1rem;
     position: absolute;
     top : 6.5rem;
-    left: 39rem;
+    left: 37rem;
 }
 
 
@@ -74,4 +74,25 @@ ul {
 }
 span {
     color : hsl(259, 100%, 65%)
+}
+
+@media screen and (max-width:700px) {
+
+    .content {
+        width: 85vw;
+    }
+    .day_input input, .month_input input, .year_input input {
+        margin-bottom: 2rem;
+        max-width: 23vw;
+    }
+    .year_input {
+        margin-right: 0;
+    }
+    .button {
+        position: absolute;
+        top: 33%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
 }
