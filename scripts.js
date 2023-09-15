@@ -42,11 +42,38 @@ button.addEventListener("click", () => {
     if (inputed_date.isValid() === true) {                                  //Verification valid format
         if (inputed_date.isBefore(moment())) {                              //Verification date inputed is in the past            
             const display_days = document.querySelector(".display_days")
-            display_days.innerHTML = moment().subtract(zone_input_day.value, "days").get("date") 
+            let counts_days = setInterval(counter_days, 50)                                  
+            let i_days = 0                                                            
+            function counter_days() {                                                 
+                display_days.innerHTML = ++i_days
+                if (i_days === moment().subtract(zone_input_day.value, "days").get("date")) {
+                    clearInterval(counts_days)
+                }
+            } 
+
+
             const display_months = document.querySelector(".display_months")
-            display_months.innerHTML = moment().subtract(zone_input_month.value, "months").get("month")
-            const display_years = document.querySelector(".display_years")
-            display_years.innerHTML = moment().get("year") - zone_input_year.value 
+            let counts_months = setInterval(counter_months, 50)                                  
+            let i_months = 0                                                            
+            function counter_months() {                                                 
+                display_months.innerHTML = ++i_months
+                if (i_months === moment().subtract(zone_input_month.value, "months").get("month")) {
+                    clearInterval(counts_months)
+                }
+            }
+
+
+            const display_years = document.querySelector(".display_years")      //Tried to make a function out of this mess but couldn't figure out how since
+            let counts_years = setInterval(counter_years, 50)                                  //it seems like that setInterval will run ITSELF again and again rather than running 
+            let i_years = 0                                                           //the function we give it, meaning that the value of the parameters you gives it will 
+            function counter_years() {                                                //stay the same even if your function is supposed to change them. 
+                display_years.innerHTML = ++i_years
+                if (i_years === moment().get("year") - zone_input_year.value) {
+                    clearInterval(counts_years)
+                }
+            }
+
+
         } else {                                                            //Display error messages if not in the past
             if (zone_input_year.value > moment().year()) {
                 display_error_message("Must be in the past", ".year_input")

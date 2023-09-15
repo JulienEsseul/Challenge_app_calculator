@@ -47,6 +47,8 @@ Users should be able to:
 
 The major thing I learned is how the play with dates in JS. I'm aware that both native JS date management and moment.js are preferably not to be used, both of them being outdated (moment.JS being deprecated). I tried to find an alternate library but all of those I found never specified which file you should add in the <script> in your HTML file to use the lib with your browser. Took me a whole day to understand it and why every lib I installed with npm would always end in throwing me errors everywhere. I guess it means that it's not how it's done nowaday and so, I could say that I learned what I needed to learn, if that makes sense. 
 
+Also, I learned how make dynamic counters with setInterval(). The code part using it is currently not in the best state since it took me a long time to understand why my function wouldn't work, so it's kind of a mess right know. I might try to make it work one day, not too sure currently. 
+
 
 ### Continued development
 
